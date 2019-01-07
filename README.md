@@ -9,7 +9,7 @@
 3. Compile: javac FileReader/FileReader.java
 4. Run: java FileReader/FileReader {optional-word}
 
-####Sample input
+####Sample run
 ~~~~
 java FileReader/FileReader
 ~~~~
@@ -17,7 +17,7 @@ java FileReader/FileReader
 ####Sample output
 The most common words are: the, and, i.
 
-####Sample input
+####Sample run
 ~~~~
 java FileReader/FileReader the
 ~~~~
