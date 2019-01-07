@@ -4,7 +4,23 @@
 
 ###Usage
 
-1. Clone the project
+1. Clone the project: https://github.com/lefevre7/FileReader
 2. cd to src
-3. javac FileReader/FileReader.java
-4. java FileReader/FileReader {optional-word}
+3. Compile: javac FileReader/FileReader.java
+4. Run: java FileReader/FileReader {optional-word}
+
+####Sample input
+~~~~
+java FileReader/FileReader
+~~~~
+
+####Sample output
+The most common words are: the, and, i.
+
+####Sample input
+~~~~
+java FileReader/FileReader the
+~~~~
+
+####Sample output
+The number of occurrences of the word "the" are: 4329.
