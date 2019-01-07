@@ -1,0 +1,28 @@
+# Ignore build folders
+out/
+**/out/
+
+# Ignore IntelliJ project meta-data
+.idea
+*.iml
+**/.idea
+**/*.iml
+
+# Ignore Eclipse project meta-data
+.project
+.classpath
+.settings
+.factorypath
+**/.project
+**/.classpath
+**/.settings
+
+# Ignore OSX specific files
+.DS_Store
+**/.DS_Store
+
+# Ignore logs
+logs/
+*.log
+**/*.log
+**/log/
