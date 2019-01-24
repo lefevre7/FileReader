@@ -50,7 +50,7 @@ public class FileReader {
 
         private static LinkedHashMap getMapFromStream(Stream<String> stream) {
             return stream
-                    .flatMap(Pattern.compile(" |\n|\t|[^a-zA-Z][^-]")::splitAsStream)
+                    .flatMap(Pattern.compile("[^a-zA-Z|-]")::splitAsStream)
                     .filter(el -> el != null && !el.trim().isEmpty() && !el.equals(""))
                     .map(x -> x.toLowerCase())
                     .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
@@ -76,3 +76,22 @@ public class FileReader {
         }
     }
 }
+
+//Python:
+//make sure to install requests and re
+//usage: python FileReader.py or python FileReader.py {optional-word}
+
+ /*
+import requests
+import re
+from collections import Counter
+import sys
+
+url = 'http://www.gutenberg.org/files/84/84-0.txt'
+response = requests.get(url)
+c = Counter(list(filter(None, re.split("[^a-zA-Z|-]", response.text.lower()))))
+if len(sys.argv) > 1:
+    print("The number of times \"" + str(sys.argv[1]) + "\" is mentioned is: " + str(c[str(sys.argv[1])]))
+else:
+    print("The top 3 words are: " + str(c.most_common(3)))
+ */
